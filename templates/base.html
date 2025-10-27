@@ -3,15 +3,26 @@
 
 <head>
   <meta charset="utf-8">
-  <title>MyBlog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="{{ get_url(path='css/style.css') }}" as="style">
+  <link rel="stylesheet" href="{{ get_url(path='css/style.css') }}">
+  <title>{{ config.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
 </head>
 
 <body>
-  <section class="section">
-    <div class="container">
-      {% block content %} {% endblock content %}
-    </div>
-  </section>
+  <nav id="nav-bar">
+    {% for nav_item in config.extra.header_nav %}
+      <a href="{{ nav_item.url }}" class="{% if current_url is defined and nav_item.url == current_url %}active{% endif %}">
+                {{ nav_item.name }}
+      </a>
+    {% endfor %}
+  </nav>
+  <main>
+    {% block content %} {% endblock content %}
+  </main>
+  <footer>
+    {% include "footer.html" %}
+  </footer>
 </body>
 
 </html>
