@@ -9,9 +9,9 @@ build_search_index = true
 
 [extra]
 header_nav = [
-  { url = "/", name = "/home/" },
-  { url = "/about", name = "/about/" },
-  { url = "/rafb", name = "/rafb/" },
-  { url = "/ramblings", name = "/ramblings/" },
-  { url = "/pics", name = "/pics/" },
+  { url = "/ElimWeb", name = "/home/" },
+  { url = "/ElimWeb/about", name = "/about/" },
+  { url = "/ElimWeb/rafb", name = "/rafb/" },
+  { url = "/ElimWeb/ramblings", name = "/ramblings/" },
+  { url = "/ElimWeb/pics", name = "/pics/" },
 ]
