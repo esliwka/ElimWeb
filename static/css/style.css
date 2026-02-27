@@ -70,3 +70,11 @@ img {
   display: inline;
   white-space: nowrap;
 }
+
+.entry {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border: dashed 2px var(--border);
+  border-radius: 4px;
+}
