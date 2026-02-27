@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  {{ section.title }}
+</h1>
+
+{{ section.content }}
+
+<p>Below is a list of beginner's books you can read to educate yourself fool.</p>
+
+{% for book in section.pages %}
+<div class="entry">
+<h3 class="book-title">{{ book.title }}</h3>
+  {{ book.description }}
+  {{ book.content | safe }}
+  <div class="book-desc">
+    <p>
+      {{ book.content }}
+    </p>
+    <a href="/books/{{ book.title }}.pdf" download="{{ book.title }}">Download</a>
+  </div>
+</div>
+{% endfor %}
+
+
+{% endblock content %}
